@@ -1,84 +1,101 @@
-----------------------Community Site--------------------
+
+# Community Site
+
 Welcome to the Community Site! This web application is built using HTML, CSS, JavaScript, Node.js, and MongoDB. It serves as a platform where users can ask questions and add answers to engage in community discussions.
 
-Prerequisites
+## Live Demo
+
+Check out the live demo of the Community Site: [Community Site Demo](https://your-community-site-demo-url)
+Demo will be updated soon
+
+## Prerequisites
+
 Before you proceed, make sure you have the following software installed on your machine:
 
-Node.js (Download and install )
-MongoDB (Download and install )
+- [Node.js](https://nodejs.org) (Download and install)
+- [MongoDB](https://www.mongodb.com/try/download/community) (Download and install)
 
-How to Run
+## How to Run
+
 Follow these steps to run the Community Site on your local machine:
 
-Clone the Repository: First, clone this repository to your local machine using the following command:
+1. **Clone the Repository:** First, clone this repository to your local machine using the following command:
 
-bash
--------------git clone https://github.com/your-username/community-site.git
+   ```bash
+   git clone https://github.com/your-username/community-site.git
+   ```
 
-Install Dependencies: Navigate to the project directory in your terminal and run the following command to install the required Node.js packages:
+2. **Install Dependencies:** Navigate to the project directory in your terminal and run the following command to install the required Node.js packages:
 
-bash
--------------npm install
+   ```bash
+   npm install
+   ```
 
-Start MongoDB Server: Make sure you have MongoDB installed and running on your machine. If it's not running, start the MongoDB server using the following command:
+3. **Start MongoDB Server:** Make sure you have MongoDB installed and running on your machine. If it's not running, start the MongoDB server using the following command:
 
-bash
--------------mongod
+   ```bash
+   mongod
+   ```
 
-Set Environment Variables: Create a new file named .env in the root of the project directory. Inside this file, define the environment variables for the MongoDB connection:
+4. **Set Environment Variables:** Create a new file named `.env` in the root of the project directory. Inside this file, define the environment variables for the MongoDB connection:
 
-plaintext
--------------MONGODB_URI=your_mongodb_connection_uri
-Replace your_mongodb_connection_uri with the actual MongoDB connection URI for your local or remote MongoDB instance.
+   ```plaintext
+   MONGODB_URI=your_mongodb_connection_uri
+   ```
 
-Run the Application: After setting up the environment variables, start the application using the following command:
+   Replace `your_mongodb_connection_uri` with the actual MongoDB connection URI for your local or remote MongoDB instance.
 
-bash
-npm start
-or 
-npm run dev
+5. **Run the Application:** After setting up the environment variables, start the application using the following command:
 
-Access the Website: The Community Site should now be accessible at http://localhost:3000 in your web browser.
+   ```bash
+   npm start
+   ```
 
-How to Use
-    The Community Site provides a user-friendly interface where users can perform the following actions:
+   or
 
-    Ask Questions: Users can ask questions related to the community's topics by filling out the "Ask a Question" form and submitting it. The question will be added to the community forum for others to view and answer.
+   ```bash
+   npm run dev
+   ```
 
-    Add Answers: Users can contribute to community discussions by providing answers to questions posted by others. The "Add Answer" form allows users to share their knowledge and insights with the community.
+6. **Access the Website:** The Community Site should now be accessible at `http://localhost:3000` in your web browser.
 
-    View Questions and Answers: The main page of the website displays a list of questions asked by various users. Users can click on a question to view its details and the corresponding answers.
+## How to Use
 
-    Search Functionality: The website may offer a search functionality to allow users to search for questions based on specific keywords or tags.
+The Community Site provides a user-friendly interface where users can perform the following actions:
 
-    User Authentication : This website has user authentication features, such as user registration and login, to manage user access and permissions. This provides that the user can only ask a question or answer a question if and only if he/she is registered to the website
+- **Ask Questions:** Users can ask questions related to the community's topics by filling out the "Ask a Question" form and submitting it. The question will be added to the community forum for others to view and answer.
 
-Technologies used in this project are:
+- **Add Answers:** Users can contribute to community discussions by providing answers to questions posted by others. The "Add Answer" form allows users to share their knowledge and insights with the community.
 
-    Node.js: The backend of the application is built using Node.js, a JavaScript runtime that allows developers to execute JavaScript code on the server-side.
+- **View Questions and Answers:** The main page of the website displays a list of questions asked by various users. Users can click on a question to view its details and the corresponding answers.
 
-    Express: Express is a web application framework for Node.js that simplifies the process of building server-side applications. It is used to handle routing, middleware, and other functionalities related to HTTP requests and responses.
+- **Search Functionality:** The website may offer a search functionality to allow users to search for questions based on specific keywords or tags.
 
-    MongoDB: MongoDB is a NoSQL database used to store and manage the application's data. In this project, it is used to store user registration data and questions with their answers.
+- **User Authentication:** This website has user authentication features, such as user registration and login, to manage user access and permissions. This ensures that the user can only ask a question or answer a question if and only if they are registered on the website.
 
-    Mongoose: Mongoose is an Object Data Modeling (ODM) library for MongoDB and Node.js. It provides a schema-based solution for modeling application data and interacting with MongoDB.
+## Technologies Used
 
-    bcryptjs: bcryptjs is a library used for hashing and comparing passwords. It is commonly used to securely store user passwords in the database.
+The technologies used in this project are:
 
-    Express-session: Express-session is a middleware used to manage user sessions in the application. It helps in maintaining user authentication and keeping track of user data during their visit.
+- Node.js
+- Express
+- MongoDB
+- Mongoose
+- bcryptjs
+- Express-session
+- HTML, CSS, JavaScript
+- Handlebars (hbs)
+- Git
 
-    HTML, CSS, JavaScript: These are the standard front-end technologies used to build the user interface and implement client-side functionalities in the web application.
+The technologies used in this project follow the MEAN stack (MongoDB, Express, Angular, Node.js) with Handlebars as the templating engine instead of Angular for the front-end.
 
-    Handlebars (hbs): Handlebars is a templating engine used to generate dynamic HTML pages. It allows developers to define reusable templates and inject dynamic data into HTML files.
+## Contributing
 
-    Git: Git is a version control system used to track changes in the project's source code and collaborate with other developers.
-
-    The technologies used in this project follow the MEAN stack (MongoDB, Express, Angular, Node.js) with Handlebars as the templating engine instead of Angular for the front-end.
-
-Contributing
 If you'd like to contribute to this project, feel free to open an issue or submit a pull request on the GitHub repository. Your feedback and contributions are highly appreciated!
 
+---
 
 Thank you for using the Community Site! If you have any questions or need assistance, feel free to reach out to us through our GitHub repository or email. Happy community building!
 
-Created by Swikrit Shukla 2023 All rights reserved.....
+Created by Swikrit Shukla - All rights reserved.
+```
