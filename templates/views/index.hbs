@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0
+        }
+
+        .main {
+            width: 100%;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        nav {
+            flex-basis: 20%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid black;
+        }
+
+        .company-icon img {
+            width: 10rem;
+            padding: 1rem 8rem;
+        }
+
+        .info {
+            width: 23rem;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .info a {
+            text-decoration: none;
+            font-size: 1.2rem;
+            padding: 6px 14px;
+            border-radius: 10px;
+            color: black;
+        }
+
+        .info a:hover {
+            color: aliceblue;
+            background-color: crimson;
+
+        }
+
+        .qa-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            min-height: 75vh;
+            padding: 3rem 0;
+        }
+
+        .card {
+            max-width: 75%;
+            padding: 30px 20px;
+            background-color: rgb(255, 246, 235);
+            margin-bottom: 2rem;
+            box-shadow: 0 8px 32px 0 rgba(148, 148, 151, 0.37);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            gap: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <nav>
+            <div class="company-icon">
+                <img src="https://d144mzi0q5mijx.cloudfront.net/img/C/O/community.png" alt="">
+            </div>
+            <div class="info">
+                <a href="/login">Login</a>
+                <a href="/register">Register</a>
+            </div>
+        </nav>
+
+        <div class="qa-container">
+            {{#each questions}}
+            <div class="card">
+                <h2>{{this.question}}</h2>
+                <p>Questioned by {{this.email}}</p>
+                {{#each this.answers}}
+                <ul class="answer">
+                    <li class="ans">{{this.text}}</li>
+                    <p class="ans-user"><strong>~{{this.user}}</strong></p>
+                </ul>
+                {{/each}}
+                <a href="/login">Add Answer</a>
+            </div>
+            {{/each}}
+
+        </div>
+</body>
+
+</html>

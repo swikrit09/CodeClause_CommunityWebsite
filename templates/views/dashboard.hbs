@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        .main{
+            width: 100%;
+            min-height: 100vh;
+            display:flex;
+            flex-direction: column;
+        }
+        nav{
+            flex-basis: 20%;
+            display:flex ;
+            justify-content: space-between;
+            align-items: center;
+           border-bottom: 2px solid black;
+        }
+        .company-icon img{
+            width: 10rem;
+            padding: 1rem 8rem;
+        }
+        .info{
+            width:28rem;
+            display: flex ;
+            justify-content: space-around;
+        }
+        .info a{
+            text-decoration: none;
+            font-size: 1.2rem;
+            padding: 6px 14px;
+            border-radius: 10px;
+        }
+        .info a:hover{
+            color: aliceblue;
+            background-color: crimson;
+
+        }
+       
+    .qa-container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            min-height: 75vh;
+            padding: 3rem 0;
+    }
+        .card{
+            max-width: 75%;
+            padding:  30px 20px;
+            background-color: rgb(255, 246, 235);
+            margin-bottom:2rem ;
+            box-shadow: 0 8px 32px 0 rgba(148, 148, 151, 0.37);
+            display: flex;
+            flex-direction: column;
+            justify-content:space-evenly;
+            gap: 15px;
+        }
+#ans{
+    width: 25%;
+   padding: 3px 10px;
+}
+#submit{
+    padding: 3px 10px;
+    font-size: 15px;
+}
+    </style>
+</head>
+<body>
+    <div class="main">
+        {{>navbar}}
+
+            <div class="qa-container">
+                 {{#each questions}}
+  <div class="card">
+    <h2>{{this.question}}</h2>
+    <p>Questioned by {{this.email}}</p>
+     {{#each this.answers}}
+    <ul class="answer">
+      <li class="ans">{{this.text}}</li>
+      <p class="ans-user"><strong>~{{this.user}}</strong></p>
+    </ul>
+     {{/each}}
+    <form action="/answer" method="post">
+    <input type="hidden" name="questionId" value="{{this._id}}">
+      <input type="text" id="ans" name="answer" placeholder="Add answer" required>
+      <input type="submit" id="submit" value="Submit">
+    </form>
+  </div>
+  {{/each}}
+
+    </div>
+</body>
+</html>

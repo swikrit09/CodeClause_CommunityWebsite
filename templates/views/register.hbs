@@ -1,0 +1,33 @@
+{{>header}}
+<body>
+    {{!-- {{>navbar}} --}}
+    <div class="page">
+    <div class="container">
+        <h2 class="title">Community Registeration form</h2>
+        <form action="/register" method="post" >
+            <input type="text" name="firstname" class="form-control" placeholder="First Name *" value="" required>
+            <input type="text" name="lastname" class="form-control" placeholder="Last Name *" value="" required>
+            <input type="email" name="email" class="form-control" placeholder="Your Email *" value="" required>
+           <div class="gender">
+
+
+                <label for="male">Male</label>
+                <input type="radio" name="gender" value="male" required>
+
+                <label for="female">Female</label>
+                <input type="radio" name="gender" value="female">
+           </div>
+            <input type="text" name="phone" class="form-control" placeholder="Your Phone *" max-length="10"
+                min-length="10" value="" required>
+             <input type="text" name="age" class="form-control" placeholder="Enter Your Age *" value="" required>
+            <input type="password" name="password" class="form-control" placeholder="Password *" value="" required>
+              <input type="password" name="cpassword" class="form-control" placeholder="Confirm Password *" value="" required>
+              <p id="text">Already have a Account? <a href="/login">Sign in</a> </p>
+              <a href="\index" id="back">Go Back</a>
+              <input type="submit" value="Register" id="reg">
+    
+    </form>
+    </div>
+    </div>
+</body>
+</html>

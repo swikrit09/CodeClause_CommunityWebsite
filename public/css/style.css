@@ -1,0 +1,98 @@
+*{
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+    font-family: Geneva, Tahoma, sans-serif;
+}
+.page{
+    width:100%;
+    min-height: 100vh;
+    background: url("https://png.pngtree.com/thumb_back/fh260/background/20200714/pngtree-modern-double-color-futuristic-neon-background-image_351866.jpg");
+    background-size: cover;
+    
+
+    display: flex;
+    flex-direction: column;
+    justify-content:center ;
+    align-items: center;
+    /* background-color: rgb(255, 255, 255); */
+}
+.container{
+    width:45rem;
+    height:20rem;
+    gap: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content:center ;
+    align-items: center;
+    background: rgba( 255, 255, 255, 0.25 );
+box-shadow: 0 8px 32px 0 rgba(40, 48, 168, 0.37);
+backdrop-filter: blur( 4px );
+-webkit-backdrop-filter: blur( 4px );
+border-radius: 10px;
+border-top-left-radius: 35%;
+    border-bottom-right-radius: 35%;
+}
+h2{
+    color: aliceblue;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+form{
+    /* background-color: rgba(255, 183, 0, 0.352); */
+    width:75%;
+    height: 65%;
+    border-radius: 10px;
+   
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 8px;
+
+}
+label{
+    color: rgb(255, 242, 225);
+}
+input:not(input[type="radio"]){
+    background: rgba( 255, 255, 255, 0.25 );
+box-shadow: 0 8px 32px 0 rgba(40, 48, 168, 0.37);
+backdrop-filter: blur( 4px );
+-webkit-backdrop-filter: blur( 4px );
+border-radius: 10px;
+    
+
+border-radius:5px ;
+padding-left: 10px;
+height: 2rem;
+border: 0.5px solid #3a3a3a84;
+
+}
+.gender{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+#reg{
+    border-radius:10px ;
+    width: 30%;
+    color: rgb(255, 255, 255);
+    background-color: rgb(161, 0, 0);
+    grid-column: 1 / span 2; 
+  justify-self: center;
+  cursor: pointer;
+}
+#text{
+    color: white;
+}
+#text>a,#back{
+    text-decoration: none;
+    color: rgb(255, 226, 218);
+    font-weight: bold;
+    font-size: 16px;
+}
+#text>a:hover ,#back:hover{
+    color: rgba(225, 255, 0, 0.829);
+}
+nav{
+    position: absolute;
+    left: 44%;
+    top:1%
+}
