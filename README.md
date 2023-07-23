@@ -69,8 +69,6 @@ The Community Site provides a user-friendly interface where users can perform th
 
 - **View Questions and Answers:** The main page of the website displays a list of questions asked by various users. Users can click on a question to view its details and the corresponding answers.
 
-- **Search Functionality:** The website may offer a search functionality to allow users to search for questions based on specific keywords or tags.
-
 - **User Authentication:** This website has user authentication features, such as user registration and login, to manage user access and permissions. This ensures that the user can only ask a question or answer a question if and only if they are registered on the website.
 
 ## Technologies Used
